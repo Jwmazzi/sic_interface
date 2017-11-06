@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<title>S.I.C.</title>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="stylesheets/style.css"/>
+		
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<!-- Leaflet -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+        <link rel="stylesheet" href="leaflet.draw-src.css"/>
+        <link rel="stylesheet" href="leaflet.draw.css"/>
+        <script src="leaflet.draw-src.js"></script>
+        <script src="leaflet.draw.js"></script>
+
+    </head>
+	<body>
+		<div class='container'>
+
+			<div id='header' class='row'>
+				<div id='subject-id' class='col-lg-4'></div>
+
+				<div id='general-header' class='col-lg-8'>
+					<h4>Salisbury University 2018: Social Identity Complexity</h4>
+				</div>
+			</div>
+
+			<div id='row_1' class='row'>
+				<div id='form' class='col-lg-4'></div>
+				<div id='graph' class='col-lg-8'>
+					<script src="javascripts/graphBuild.js"></script>
+					<script src="javascripts/graphEvent.js"></script>
+				</div>
+			</div>
+
+			<div id='row_2' class='row'>
+				<div id='bottom-left' class="col-lg-4"></div>
+				<div id='hintArea' class='col-lg-6'></div>
+				<div id='run-btn' class='col-lg-2'>
+					<button id="submit-btn" type="button" class="btn btn-primary btn-lg" onclick="get_form_response()">Submit Form</button>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
