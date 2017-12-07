@@ -17,7 +17,7 @@ router.post('/insert', (req, res, next) => {
 		return res.json({message: 'Server Received Empty Request'});
 
 	} else {
-		var conn_string = 'postgres://postgres:postgres@localhost:5432/sic_interface';
+		var conn_string = 'postgres://postgres:postgres@localhost:5432/sic';
 		pg.connect(conn_string, (err, client, done) => {
 
 			if (err) {
@@ -38,18 +38,18 @@ router.post('/insert', (req, res, next) => {
 			}
 		});
 
-		return res.json({message: 'Response Inserted Into Database'});
+		return res.json({message: 'Response Inserted Into Database', success: true});
 	}
 });
 
-
+// Get Subject ID
 router.get('/subject', (req, res, next) => {
 
-	var conn_string = 'postgres://postgres:postgres@localhost:5432/sic_base';
+	var conn_string = 'postgres://postgres:postgres@localhost:5432/sic';
 
 	pg.connect(conn_string, (err, client, done)=> {
 
-		client.query('select max(subject)+1 as id from t1_circles', (err, r)=> {
+		client.query('select max(subject)+1 as id from survey', (err, r)=> {
 			
 			return res.json({message: r.rows[0].id});
 		});
